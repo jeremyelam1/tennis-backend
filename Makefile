@@ -4,7 +4,7 @@ SHELL = $(if $(wildcard $(SHELL_PATH)),/bin/ash,/bin/bash)
 
 
 dev-up:
-	docker compose up -d
+	docker compose -f ./zarf/docker-compose.yml up -d
 
 dev-down:
-	docker compose down
+	docker compose -f ./zarf/docker-compose.yml down
